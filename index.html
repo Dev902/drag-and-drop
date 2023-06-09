@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Example</title>
+    <style>
+        /* Add CSS styles for containers and items */
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #ccc;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .item {
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+            cursor: move;
+        }
+
+        .success-message {
+            color: green;
+        }
+
+        .item.dragging {
+             opacity: 0.5;
+             box-shadow: 0 0 5px #000;
+        }
+
+        #image {
+            max-width: 50%;
+             max-height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container1">
+        <div class="item" draggable="true">Graydot Technologies Private Limited</div>
+        <div class="item" draggable="true">Mr. Krishna Mohan</div>
+        <div  class="item" draggable="true">
+            <img src="./assets/image.jpg" alt="Item 3" id="image">
+        </div>
+    </div>
+    
+    <div class="container" id="container2"></div>
+
+    <button id="resetButton">Reset</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
